@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Projects | Vaibhav</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* EXTRA FIXED STYLE */
+body{
+background:#0f172a;
+color:white;
+font-family:Arial;
+}
+
+.projects-container{
+padding:100px 50px;
+max-width:1200px;
+margin:auto;
+}
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1e293b;
+border-radius:12px;
+overflow:hidden;
+transition:0.3s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px rgba(56,189,248,0.4);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card-content{
+padding:15px;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h2>Projects</h2>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="skills.html">Skills</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<div class="projects-container">
+
+<h1>My Engineering Projects</h1>
+
+<div class="projects-grid">
+
+<!-- PROJECT 1 -->
+<a href="brake.html">
+<div class="card">
+<img src="brake.jpg">
+<div class="card-content">
+<h3>Brake Pedal Optimization</h3>
+<p>Topology optimization using SolidWorks</p>
+</div>
+</div>
+</a>
+
+<!-- PROJECT 2 -->
+<a href="thermal.html">
+<div class="card">
+<img src="thermal.jpg">
+<div class="card-content">
+<h3>Oil Drain Plug Redesign</h3>
+<p>Thermal performance improvement</p>
+</div>
+</div>
+</a>
+
+<!-- PROJECT 3 -->
+<a href="speed.html">
+<div class="card">
+<img src="speed.jpg">
+<div class="card-content">
+<h3>Smart Speed Bump</h3>
+<p>V2I based adaptive system</p>
+</div>
+</div>
+</a>
+
+<!-- PROJECT 4 -->
+<a href="ansys.html">
+<div class="card">
+<img src="ansys.jpg">
+<div class="card-content">
+<h3>Vibration Analysis</h3>
+<p>ANSYS durability simulation</p>
+</div>
+</div>
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

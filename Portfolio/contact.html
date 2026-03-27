@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Vaibhav Dahatonde</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins';}
+
+body{
+background:linear-gradient(-45deg,#0f172a,#020617,#1e293b,#000);
+background-size:400% 400%;
+animation:bg 10s infinite;
+color:white;
+}
+
+@keyframes bg{
+0%{background-position:0%}
+50%{background-position:100%}
+100%{background-position:0%}
+}
+
+/* NAV */
+header{
+display:flex;
+justify-content:space-between;
+padding:20px 50px;
+background:rgba(0,0,0,0.6);
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+}
+
+/* CONTAINER */
+.container{
+max-width:1000px;
+margin:auto;
+padding:80px 20px;
+}
+
+/* TITLE */
+h1{
+text-align:center;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+color:#aaa;
+margin-bottom:40px;
+}
+
+/* CONTACT GRID */
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+/* CARD */
+.card{
+background:#111827;
+padding:25px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px #38bdf8;
+}
+
+/* INPUTS */
+input, textarea{
+width:100%;
+padding:10px;
+margin-top:10px;
+background:#020617;
+border:none;
+color:white;
+border-radius:6px;
+}
+
+button{
+margin-top:15px;
+padding:12px;
+width:100%;
+background:#38bdf8;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* SOCIAL */
+.social a{
+display:block;
+margin:10px 0;
+color:#38bdf8;
+text-decoration:none;
+}
+
+/* CURSOR */
+.cursor{
+position:fixed;
+width:20px;
+height:20px;
+background:#38bdf8;
+border-radius:50%;
+pointer-events:none;
+box-shadow:0 0 20px #38bdf8,0 0 40px #38bdf8;
+z-index:999;
+}
+</style>
+</head>
+
+<body>
+
+<div class="cursor"></div>
+
+<header>
+<h2>Vaibhav</h2>
+<nav>
+<a href="index.html">Home</a>
+<a href="projects.html">Projects</a>
+<a href="skills.html">Skills</a>
+</nav>
+</header>
+
+<div class="container">
+
+<h1>Contact Me</h1>
+<p class="subtitle">Let’s connect and build something impactful 🚀</p>
+
+<div class="contact-grid">
+
+<!-- LEFT: FORM -->
+<div class="card">
+
+<h2>Send Message</h2>
+
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button onclick="sendMessage()">Send Message</button>
+
+</div>
+
+<!-- RIGHT: INFO -->
+<div class="card">
+
+<h2>Contact Info</h2>
+
+<p>📧 vaibhavdahatonde303@gmail.com</p>
+<p>📍 Pune, India</p>
+
+<div class="social">
+<a href="https://www.linkedin.com/in/vaibhav-dahatonde-1480bb373">LinkedIn</a>
+<a href="#">GitHub</a>
+<a href="resume.pdf">Download Resume</a>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+// CURSOR
+const cursor=document.querySelector(".cursor");
+document.addEventListener("mousemove",e=>{
+cursor.style.top=e.clientY+"px";
+cursor.style.left=e.clientX+"px";
+});
+
+// BUTTON ALERT
+function sendMessage(){
+alert("Message Sent Successfully 🚀");
+}
+
+</script>
+
+</body>
+</html>

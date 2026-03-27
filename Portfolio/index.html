@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vaibhav Dahatonde | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins';}
+
+body{
+background:linear-gradient(-45deg,#0f172a,#020617,#1e293b,#000);
+background-size:400% 400%;
+animation:bg 10s infinite;
+color:white;
+opacity:0;
+transition:0.8s;
+}
+
+@keyframes bg{
+0%{background-position:0%}
+50%{background-position:100%}
+100%{background-position:0%}
+}
+
+/* LOADER */
+#loader{
+position:fixed;
+width:100%;
+height:100%;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+color:#38bdf8;
+font-size:30px;
+}
+
+/* NAV */
+header{
+display:flex;
+justify-content:space-between;
+padding:20px 50px;
+background:rgba(0,0,0,0.6);
+position:sticky;
+top:0;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+}
+
+/* HERO */
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:100px 60px;
+}
+
+.hero img{
+width:280px;
+border-radius:20px;
+box-shadow:0 0 40px #38bdf8;
+}
+
+/* BUTTON */
+.btn{
+padding:12px 25px;
+background:#38bdf8;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* SECTION */
+section{
+padding:80px 60px;
+max-width:1100px;
+margin:auto;
+}
+
+/* CARDS */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#111827;
+padding:20px;
+border-radius:12px;
+transition:0.2s;
+}
+
+/* CURSOR */
+.cursor{
+position:fixed;
+width:20px;
+height:20px;
+background:#38bdf8;
+border-radius:50%;
+pointer-events:none;
+box-shadow:0 0 20px #38bdf8,0 0 40px #38bdf8;
+z-index:999;
+}
+
+/* STATS */
+.stats{
+display:flex;
+justify-content:space-around;
+padding:40px;
+background:#020617;
+text-align:center;
+}
+
+h2{margin-bottom:15px;}
+
+</style>
+</head>
+
+<body>
+
+<div id="loader">Loading...</div>
+<div class="cursor"></div>
+
+<header>
+<h2>Vaibhav Dahatonde</h2>
+<nav>
+<a href="projects.html">Projects</a>
+<a href="skills.html">Skills</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+<div>
+<h1>Mechanical Engineer & Design Innovator</h1>
+
+<p>
+I specialize in CAD design, CAE simulations, and manufacturing systems.  
+I focus on solving real-world engineering problems through optimized design and performance-driven solutions.
+</p>
+
+<p>
+With hands-on experience in CNC systems and engineering analysis, I aim to develop efficient and reliable mechanical solutions.
+</p>
+
+<button class="btn">Explore My Work</button>
+</div>
+
+<img src="profile.jpg">
+
+</section>
+
+<!-- ABOUT -->
+<section>
+
+<h2>About Me</h2>
+
+<p>
+Mechanical Engineering student at VIT Pune (CGPA: 8.04) with strong expertise in CAD, CAE, and manufacturing systems.
+</p>
+
+<p>
+Experienced in CNC diagnostics, GD&T, and engineering problem-solving techniques such as FMEA and structured analysis.
+</p>
+
+<p>
+I am passionate about improving product performance through optimization, simulation, and innovative design strategies.
+</p>
+
+</section>
+
+<!-- PROJECTS -->
+<section>
+
+<h2>Featured Projects</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Brake Pedal Optimization</h3>
+<p>Reduced weight by 15% using topology optimization while improving structural performance.</p>
+</div>
+
+<div class="card">
+<h3>Oil Drain Plug Redesign</h3>
+<p>Enhanced thermal efficiency by 10% through improved heat transfer design.</p>
+</div>
+
+<div class="card">
+<h3>Adaptive Smart Speed Bump</h3>
+<p>Developed V2I-based system for dynamic road safety improvements.</p>
+</div>
+
+<div class="card">
+<h3>Vibration Analysis</h3>
+<p>Performed ANSYS simulation to improve durability and reduce fatigue failure.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- EXPERIENCE -->
+<section>
+
+<h2>Experience</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>CNC Internship</h3>
+<p>
+Worked on spindle repair, diagnostics, and industrial automation systems.  
+Applied FMEA and problem-solving techniques to improve machine performance.
+</p>
+</div>
+
+<div class="card">
+<h3>Engineering Practices</h3>
+<p>
+Applied GD&T and quality inspection techniques for precision manufacturing and decision-making.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+<section>
+
+<h2>Core Skills</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>CAD & Design</h3>
+<p>SolidWorks, CATIA, Fusion 360</p>
+</div>
+
+<div class="card">
+<h3>CAE Simulation</h3>
+<p>ANSYS, Stress & Thermal Analysis</p>
+</div>
+
+<div class="card">
+<h3>Manufacturing</h3>
+<p>CNC, GD&T, Quality Control</p>
+</div>
+
+<div class="card">
+<h3>Programming</h3>
+<p>Python, Excel</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+<section class="stats">
+
+<div>
+<h2>8.04</h2>
+<p>CGPA</p>
+</div>
+
+<div>
+<h2>15%</h2>
+<p>Weight Reduction</p>
+</div>
+
+<div>
+<h2>10%</h2>
+<p>Efficiency Gain</p>
+</div>
+
+<div>
+<h2>4+</h2>
+<p>Projects</p>
+</div>
+
+</section>
+
+<script>
+
+// LOAD EFFECT
+window.onload=()=>{
+document.body.style.opacity="1";
+document.getElementById("loader").style.display="none";
+}
+
+// CURSOR
+const cursor=document.querySelector(".cursor");
+document.addEventListener("mousemove",e=>{
+cursor.style.top=e.clientY+"px";
+cursor.style.left=e.clientX+"px";
+});
+
+// TILT
+document.querySelectorAll(".card").forEach(card=>{
+card.addEventListener("mousemove",e=>{
+let x=e.offsetX;
+let y=e.offsetY;
+let cx=card.offsetWidth/2;
+let cy=card.offsetHeight/2;
+card.style.transform=`rotateX(${-(y-cy)/10}deg) rotateY(${(x-cx)/10}deg)`;
+});
+card.addEventListener("mouseleave",()=>card.style.transform="none");
+});
+
+</script>
+
+</body>
+</html>
