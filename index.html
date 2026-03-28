@@ -12,32 +12,9 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins';}
 
 body{
-background:linear-gradient(-45deg,#0f172a,#020617,#1e293b,#000);
-background-size:400% 400%;
-animation:bg 10s infinite;
+background:radial-gradient(circle at top,#0f172a,#020617,#000);
 color:white;
-opacity:0;
-transition:0.8s;
-}
-
-@keyframes bg{
-0%{background-position:0%}
-50%{background-position:100%}
-100%{background-position:0%}
-}
-
-/* LOADER */
-#loader{
-position:fixed;
-width:100%;
-height:100%;
-background:#000;
-display:flex;
-justify-content:center;
-align-items:center;
-z-index:9999;
-color:#38bdf8;
-font-size:30px;
+overflow-x:hidden;
 }
 
 /* NAV */
@@ -45,59 +22,139 @@ header{
 display:flex;
 justify-content:space-between;
 padding:20px 50px;
-background:rgba(0,0,0,0.6);
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
 position:sticky;
 top:0;
+z-index:10;
 }
 
 nav a{
 color:white;
 margin-left:20px;
 text-decoration:none;
+transition:0.3s;
 }
+nav a:hover{color:#38bdf8;}
 
 /* HERO */
 .hero{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:100px 60px;
+padding:100px;
+}
+
+.highlight{
+color:#38bdf8;
+text-shadow:0 0 20px #38bdf8;
+}
+
+.typing{
+color:#38bdf8;
+margin:10px 0;
 }
 
 .hero img{
-width:280px;
+width:300px;
 border-radius:20px;
-box-shadow:0 0 40px #38bdf8;
+box-shadow:0 0 50px rgba(56,189,248,0.7);
+transition:0.4s;
+}
+.hero img:hover{
+transform:scale(1.05);
 }
 
 /* BUTTON */
 .btn{
 padding:12px 25px;
-background:#38bdf8;
+background:linear-gradient(45deg,#38bdf8,#0ea5e9);
 border:none;
 border-radius:8px;
 cursor:pointer;
+color:white;
+transition:0.3s;
+}
+.btn:hover{
+box-shadow:0 0 20px #38bdf8;
 }
 
 /* SECTION */
 section{
-padding:80px 60px;
-max-width:1100px;
+padding:80px;
+max-width:1200px;
 margin:auto;
 }
 
-/* CARDS */
+/* GRID */
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
 }
 
+/* INSANE CARD */
 .card{
-background:#111827;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+padding:25px;
+border-radius:15px;
+backdrop-filter:blur(12px);
+transition:0.4s;
+transform-style:preserve-3d;
+}
+
+.card:hover{
+transform:translateY(-10px) rotateX(5deg) rotateY(5deg);
+box-shadow:0 0 30px rgba(56,189,248,0.6);
+}
+
+/* ABOUT */
+.about-box{
+background:linear-gradient(145deg,#020617,#111827);
+padding:30px;
+border-radius:15px;
+box-shadow:0 0 30px rgba(56,189,248,0.2);
+line-height:1.7;
+}
+
+/* SKILLS */
+.skill-card{
+background:rgba(255,255,255,0.05);
 padding:20px;
 border-radius:12px;
-transition:0.2s;
+transition:0.4s;
+}
+
+.skill-card:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px #38bdf8;
+}
+
+/* PROGRESS */
+.progress{
+height:6px;
+background:#222;
+margin-top:10px;
+border-radius:5px;
+}
+.progress div{
+height:100%;
+background:#38bdf8;
+border-radius:5px;
+}
+
+/* STATS */
+.stats{
+display:flex;
+justify-content:space-around;
+padding:50px;
+text-align:center;
+}
+
+.counter{
+font-size:35px;
+color:#38bdf8;
 }
 
 /* CURSOR */
@@ -108,27 +165,14 @@ height:20px;
 background:#38bdf8;
 border-radius:50%;
 pointer-events:none;
-box-shadow:0 0 20px #38bdf8,0 0 40px #38bdf8;
+box-shadow:0 0 20px #38bdf8,0 0 50px #38bdf8;
 z-index:999;
 }
-
-/* STATS */
-.stats{
-display:flex;
-justify-content:space-around;
-padding:40px;
-background:#020617;
-text-align:center;
-}
-
-h2{margin-bottom:15px;}
-
 </style>
 </head>
 
 <body>
 
-<div id="loader">Loading...</div>
 <div class="cursor"></div>
 
 <header>
@@ -142,95 +186,60 @@ h2{margin-bottom:15px;}
 
 <!-- HERO -->
 <section class="hero">
-
 <div>
-<h1>Mechanical Engineer & Design Innovator</h1>
+<h1>Hi, I'm <span class="highlight">Vaibhav Dahatonde</span></h1>
+<h2 class="typing"></h2>
 
 <p>
-I specialize in CAD design, CAE simulations, and manufacturing systems.  
-I focus on solving real-world engineering problems through optimized design and performance-driven solutions.
-</p>
-
-<p>
-With hands-on experience in CNC systems and engineering analysis, I aim to develop efficient and reliable mechanical solutions.
+I design engineering solutions using <b>CAD modeling, CAE simulations, and manufacturing systems</b>.  
+Focused on building efficient, optimized, and real-world mechanical systems.
 </p>
 
 <button class="btn">Explore My Work</button>
 </div>
 
 <img src="profile.jpg">
-
 </section>
 
 <!-- ABOUT -->
 <section>
-
 <h2>About Me</h2>
 
+<div class="about-box">
 <p>
-Mechanical Engineering student at VIT Pune (CGPA: 8.04) with strong expertise in CAD, CAE, and manufacturing systems.
+Mechanical Engineering student at VIT Pune with a CGPA of <b>8.04</b>.  
+Hands-on experience in CAD modeling, simulation, and industrial systems.
+Worked on CNC diagnostics, spindle systems, and applied engineering tools like FMEA and GD&T for real-world problem solving.
+My approach combines <b>design thinking + simulation + practical implementation</b> to build efficient engineering solutions.
 </p>
-
-<p>
-Experienced in CNC diagnostics, GD&T, and engineering problem-solving techniques such as FMEA and structured analysis.
-</p>
-
-<p>
-I am passionate about improving product performance through optimization, simulation, and innovative design strategies.
-</p>
+</div>
 
 </section>
 
 <!-- PROJECTS -->
 <section>
-
 <h2>Featured Projects</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>Brake Pedal Optimization</h3>
-<p>Reduced weight by 15% using topology optimization while improving structural performance.</p>
-</div>
-
-<div class="card">
-<h3>Oil Drain Plug Redesign</h3>
-<p>Enhanced thermal efficiency by 10% through improved heat transfer design.</p>
-</div>
-
-<div class="card">
-<h3>Adaptive Smart Speed Bump</h3>
-<p>Developed V2I-based system for dynamic road safety improvements.</p>
-</div>
-
-<div class="card">
-<h3>Vibration Analysis</h3>
-<p>Performed ANSYS simulation to improve durability and reduce fatigue failure.</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- EXPERIENCE -->
-<section>
-
-<h2>Experience</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>CNC Internship</h3>
+<h3> Brake Pedal Optimization</h3>
 <p>
-Worked on spindle repair, diagnostics, and industrial automation systems.  
-Applied FMEA and problem-solving techniques to improve machine performance.
+Optimized design using CAD and structural analysis to improve strength and reduce material usage.
 </p>
 </div>
 
 <div class="card">
-<h3>Engineering Practices</h3>
+<h3>Oil Drain Plug Design</h3>
 <p>
-Applied GD&T and quality inspection techniques for precision manufacturing and decision-making.
+Redesigned geometry for improved heat dissipation and better performance under thermal conditions.
+</p>
+</div>
+
+<div class="card">
+<h3>Vibration Analysis</h3>
+<p>
+Performed simulation in ANSYS to analyze dynamic behavior and improve component durability.
 </p>
 </div>
 
@@ -240,29 +249,32 @@ Applied GD&T and quality inspection techniques for precision manufacturing and d
 
 <!-- SKILLS -->
 <section>
-
-<h2>Core Skills</h2>
+<h2>Technical Skills</h2>
 
 <div class="cards">
 
-<div class="card">
-<h3>CAD & Design</h3>
-<p>SolidWorks, CATIA, Fusion 360</p>
+<div class="skill-card">
+<h3>CAD Design</h3>
+<p>SolidWorks, CATIA</p>
+<div class="progress"><div style="width:90%"></div></div>
 </div>
 
-<div class="card">
+<div class="skill-card">
 <h3>CAE Simulation</h3>
-<p>ANSYS, Stress & Thermal Analysis</p>
+<p>ANSYS</p>
+<div class="progress"><div style="width:85%"></div></div>
 </div>
 
-<div class="card">
+<div class="skill-card">
 <h3>Manufacturing</h3>
-<p>CNC, GD&T, Quality Control</p>
+<p>CNC, GD&T</p>
+<div class="progress"><div style="width:80%"></div></div>
 </div>
 
-<div class="card">
+<div class="skill-card">
 <h3>Programming</h3>
 <p>Python, Excel</p>
+<div class="progress"><div style="width:70%"></div></div>
 </div>
 
 </div>
@@ -273,34 +285,42 @@ Applied GD&T and quality inspection techniques for precision manufacturing and d
 <section class="stats">
 
 <div>
-<h2>8.04</h2>
+<h2 class="counter" data-target="8">0</h2>
 <p>CGPA</p>
 </div>
 
 <div>
-<h2>15%</h2>
-<p>Weight Reduction</p>
-</div>
-
-<div>
-<h2>10%</h2>
-<p>Efficiency Gain</p>
-</div>
-
-<div>
-<h2>4+</h2>
+<h2 class="counter" data-target="4">0</h2>
 <p>Projects</p>
+</div>
+
+<div>
+<h2 class="counter" data-target="2">0</h2>
+<p>Internships</p>
 </div>
 
 </section>
 
 <script>
 
-// LOAD EFFECT
-window.onload=()=>{
-document.body.style.opacity="1";
-document.getElementById("loader").style.display="none";
+// TYPING
+const text=["Mechanical Engineer","CAD Designer","CAE Analyst"];
+let i=0,j=0,isDeleting=false;
+
+function type(){
+let current=text[i];
+document.querySelector(".typing").innerHTML=current.substring(0,j);
+
+if(!isDeleting){
+j++;
+if(j>current.length){isDeleting=true;setTimeout(type,1000);return;}
+}else{
+j--;
+if(j==0){isDeleting=false;i=(i+1)%text.length;}
 }
+setTimeout(type,isDeleting?50:100);
+}
+type();
 
 // CURSOR
 const cursor=document.querySelector(".cursor");
@@ -309,18 +329,19 @@ cursor.style.top=e.clientY+"px";
 cursor.style.left=e.clientX+"px";
 });
 
-// TILT
-document.querySelectorAll(".card").forEach(card=>{
-card.addEventListener("mousemove",e=>{
-let x=e.offsetX;
-let y=e.offsetY;
-let cx=card.offsetWidth/2;
-let cy=card.offsetHeight/2;
-card.style.transform=`rotateX(${-(y-cy)/10}deg) rotateY(${(x-cx)/10}deg)`;
+// COUNTER
+document.querySelectorAll('.counter').forEach(counter=>{
+let update=()=>{
+let target=+counter.getAttribute('data-target');
+let count=+counter.innerText;
+let inc=target/100;
+if(count<target){
+counter.innerText=Math.ceil(count+inc);
+setTimeout(update,20);
+}else counter.innerText=target;
+};
+update();
 });
-card.addEventListener("mouseleave",()=>card.style.transform="none");
-});
-
 </script>
 
 </body>
