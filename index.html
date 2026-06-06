@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -35,7 +35,7 @@ body {
   cursor: none;
 }
 
-/* â”€â”€â”€ CUSTOM CURSOR â”€â”€â”€ */
+/* ─── CUSTOM CURSOR ─── */
 .cursor-dot {
   position: fixed; top:0; left:0; width:8px; height:8px;
   background: var(--v3); border-radius:50%; pointer-events:none;
@@ -51,14 +51,14 @@ body {
 body:has(a:hover) .cursor-ring,
 body:has(button:hover) .cursor-ring { transform:translate(-50%,-50%) scale(1.6); border-color:var(--v3); }
 
-/* â”€â”€â”€ NOISE OVERLAY â”€â”€â”€ */
+/* ─── NOISE OVERLAY ─── */
 body::before {
   content:''; position:fixed; inset:0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
   pointer-events:none; z-index:1000; opacity:0.4;
 }
 
-/* â”€â”€â”€ AURORA BG â”€â”€â”€ */
+/* ─── AURORA BG ─── */
 .aurora {
   position:fixed; inset:0; pointer-events:none; z-index:0; overflow:hidden;
 }
@@ -74,7 +74,7 @@ body::before {
   to   { transform: translate(40px,40px) scale(1.1); }
 }
 
-/* â”€â”€â”€ NAV â”€â”€â”€ */
+/* ─── NAV ─── */
 header {
   display:flex; justify-content:space-between; align-items:center;
   padding:18px 60px;
@@ -108,7 +108,7 @@ nav a:hover { color:var(--text); background:var(--surface); }
 .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; }
 .hamburger span { display:block; width:24px; height:2px; background:var(--v3); border-radius:2px; transition:0.3s; }
 
-/* â”€â”€â”€ HERO â”€â”€â”€ */
+/* ─── HERO ─── */
 .hero {
   position:relative; z-index:1;
   min-height: 100vh;
@@ -234,7 +234,7 @@ h1.hero-title {
 }
 @keyframes float { 0%,100%{transform:translateX(-50%) translateY(0);} 50%{transform:translateX(-50%) translateY(8px);} }
 
-/* â”€â”€â”€ SECTION WRAPPER â”€â”€â”€ */
+/* ─── SECTION WRAPPER ─── */
 .section-wrap {
   position:relative; z-index:1;
   max-width:1200px; margin:0 auto; padding:100px 60px;
@@ -259,13 +259,13 @@ h2.section-title {
 
 .section-desc { color:var(--muted); max-width:500px; line-height:1.75; margin-bottom:60px; }
 
-/* â”€â”€â”€ DIVIDER â”€â”€â”€ */
+/* ─── DIVIDER ─── */
 .divider {
   height:1px; background: linear-gradient(to right, transparent, var(--border), transparent);
   margin: 0 60px; position:relative; z-index:1;
 }
 
-/* â”€â”€â”€ ABOUT â”€â”€â”€ */
+/* ─── ABOUT ─── */
 .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start; }
 
 .about-card {
@@ -293,7 +293,7 @@ h2.section-title {
 .hi-text strong { display:block; font-weight:600; font-size:0.9rem; color:var(--text); }
 .hi-text span { font-size:0.8rem; color:var(--muted); }
 
-/* â”€â”€â”€ EXPERIENCE â”€â”€â”€ */
+/* ─── EXPERIENCE ─── */
 .timeline { position:relative; padding-left:36px; }
 .timeline::before {
   content:''; position:absolute; left:14px; top:8px; bottom:8px; width:1.5px;
@@ -320,9 +320,9 @@ h2.section-title {
 .tc-company { font-size:0.85rem; color:var(--v3); font-weight:500; margin-bottom:14px; }
 .tc-points { list-style:none; }
 .tc-points li { font-size:0.88rem; color:var(--muted); line-height:1.7; padding:4px 0; padding-left:16px; position:relative; }
-.tc-points li::before { content:'â†’'; position:absolute; left:0; color:var(--v3); }
+.tc-points li::before { content:'→'; position:absolute; left:0; color:var(--v3); }
 
-/* â”€â”€â”€ PROJECTS â”€â”€â”€ */
+/* ─── PROJECTS ─── */
 .projects-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:24px; }
 
 .project-card {
@@ -365,7 +365,7 @@ h2.section-title {
   border-radius:0 8px 8px 0; font-size:0.82rem; color:var(--v4);
 }
 
-/* â”€â”€â”€ SKILLS â”€â”€â”€ */
+/* ─── SKILLS ─── */
 .skills-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
 
 .skill-category {
@@ -394,7 +394,7 @@ h2.section-title {
 }
 .skill-tag:hover { background:rgba(124,58,237,0.2); color:var(--v3); }
 
-/* â”€â”€â”€ CERTIFICATIONS â”€â”€â”€ */
+/* ─── CERTIFICATIONS ─── */
 .cert-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
 
 .cert-card {
@@ -417,7 +417,7 @@ h2.section-title {
   color:#6ee7b7; border-radius:20px;
 }
 
-/* â”€â”€â”€ CONTACT â”€â”€â”€ */
+/* ─── CONTACT ─── */
 .contact-grid { display:grid; grid-template-columns:1fr 1.2fr; gap:50px; align-items:start; }
 
 .contact-info { }
@@ -448,7 +448,7 @@ h2.section-title {
 .form-group input:focus, .form-group textarea:focus { border-color:var(--v3); }
 .form-group input::placeholder, .form-group textarea::placeholder { color:rgba(167,139,202,0.4); }
 
-/* â”€â”€â”€ FOOTER â”€â”€â”€ */
+/* ─── FOOTER ─── */
 footer {
   text-align:center; padding:40px 20px;
   border-top:1px solid var(--border); color:var(--muted);
@@ -456,7 +456,7 @@ footer {
 }
 footer span { color:var(--v3); }
 
-/* â”€â”€â”€ MOBILE NAV â”€â”€â”€ */
+/* ─── MOBILE NAV ─── */
 .mobile-menu {
   display:none; flex-direction:column; gap:4px;
   background:rgba(6,1,15,0.97); backdrop-filter:blur(20px);
@@ -471,14 +471,14 @@ footer span { color:var(--v3); }
 .mobile-menu a:hover { color:var(--v3); }
 .mobile-menu.open { display:flex; }
 
-/* â”€â”€â”€ FADE IN â”€â”€â”€ */
+/* ─── FADE IN ─── */
 .fade-up {
   opacity:0; transform:translateY(30px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .fade-up.visible { opacity:1; transform:translateY(0); }
 
-/* â”€â”€â”€ RESPONSIVE â”€â”€â”€ */
+/* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
   header { padding:16px 24px; }
   nav { display:none; }
@@ -520,7 +520,7 @@ footer span { color:var(--v3); }
   <div class="aurora-blob"></div>
 </div>
 
-<!-- â”€â”€â”€ HEADER â”€â”€â”€ -->
+<!-- ─── HEADER ─── -->
 <header>
   <div class="logo">VD</div>
   <nav>
@@ -530,7 +530,7 @@ footer span { color:var(--v3); }
     <a href="#skills">Skills</a>
     <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
-    <a href="resume.pdf" download="Vaibhav_Dahatonde_Resume.pdf" class="nav-cta">â†“ Resume</a>
+    <a href="resume.pdf" download="Vaibhav_Dahatonde_Resume.pdf" class="nav-cta">↓ Resume</a>
   </nav>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -544,10 +544,10 @@ footer span { color:var(--v3); }
   <a href="#skills" onclick="toggleMenu()">Skills</a>
   <a href="#certifications" onclick="toggleMenu()">Certifications</a>
   <a href="#contact" onclick="toggleMenu()">Contact</a>
-  <a href="resume.pdf" download="Vaibhav_Dahatonde_Resume.pdf" onclick="toggleMenu()">â†“ Download Resume</a>
+  <a href="resume.pdf" download="Vaibhav_Dahatonde_Resume.pdf" onclick="toggleMenu()">↓ Download Resume</a>
 </div>
 
-<!-- â”€â”€â”€ HERO â”€â”€â”€ -->
+<!-- ─── HERO ─── -->
 <section class="hero">
   <div class="hero-left fade-up">
     <div class="hero-badge">Available for opportunities</div>
@@ -558,15 +558,15 @@ footer span { color:var(--v3); }
     <div class="hero-typing" id="typing"></div>
     <p class="hero-desc">
       Final-year B.Tech Mechanical Engineering student at VIT Pune. Proficient in
-      <strong>CATIA V5, SolidWorks, ANSYS</strong> â€” turning complex engineering challenges into
+      <strong>CATIA V5, SolidWorks, ANSYS</strong> — turning complex engineering challenges into
       optimized, simulation-validated designs.
     </p>
     <div class="hero-buttons">
       <a href="projects.html" class="btn-primary">
-        âœ¦ View My Work
+        ✦ View My Work
       </a>
       <a href="#contact" class="btn-outline">
-        Get In Touch â†’
+        Get In Touch →
       </a>
     </div>
   </div>
@@ -598,17 +598,17 @@ footer span { color:var(--v3); }
 
 <div class="divider"></div>
 
-<!-- â”€â”€â”€ ABOUT â”€â”€â”€ -->
+<!-- ─── ABOUT ─── -->
 <section id="about" class="section-wrap">
   <div class="section-label">Who I Am</div>
   <h2 class="section-title">About <span>Me</span></h2>
-  <p class="section-desc">Engineering solutions from first principles â€” through design, simulation, and real-world validation.</p>
+  <p class="section-desc">Engineering solutions from first principles — through design, simulation, and real-world validation.</p>
 
   <div class="about-grid fade-up">
     <div class="about-card">
       <p>
         Final-year B.Tech Mechanical Engineering student at <strong>Vishwakarma Institute of Technology, Pune</strong> (CGPA: <strong>8.16</strong>). 
-        My work spans <strong>3D product design, structural simulation, and CAD modelling</strong> â€” with hands-on experience from two CNC internships applying GD&T, DFMEA, and quality inspection in live production environments.
+        My work spans <strong>3D product design, structural simulation, and CAD modelling</strong> — with hands-on experience from two CNC internships applying GD&T, DFMEA, and quality inspection in live production environments.
         <br><br>
         As a <strong>Chassis Domain Member</strong> at Veloce Racing (SAE), I worked on frame geometry, load path optimisation, and torsional rigidity of a Formula-style race car.
         <br><br>
@@ -617,35 +617,35 @@ footer span { color:var(--v3); }
     </div>
     <div class="about-highlights">
       <div class="highlight-item">
-        <div class="hi-icon">ðŸŽ“</div>
+        <div class="hi-icon">🎓</div>
         <div class="hi-text">
-          <strong>VIT Pune â€” B.Tech Mechanical</strong>
-          <span>2023 â€“ 2027 â€¢ CGPA: 8.04</span>
+          <strong>VIT Pune — B.Tech Mechanical</strong>
+          <span>2023 – 2027 • CGPA: 8.04</span>
         </div>
       </div>
       <div class="highlight-item">
-        <div class="hi-icon">ðŸ“</div>
+        <div class="hi-icon">📍</div>
         <div class="hi-text">
           <strong>Pune, Maharashtra</strong>
           <span>India</span>
         </div>
       </div>
       <div class="highlight-item">
-        <div class="hi-icon">ðŸŽï¸</div>
+        <div class="hi-icon">🏎️</div>
         <div class="hi-text">
-          <strong>Veloce Racing â€” SAE Club</strong>
+          <strong>Veloce Racing — SAE Club</strong>
           <span>Chassis Domain Member</span>
         </div>
       </div>
       <div class="highlight-item">
-        <div class="hi-icon">ðŸ¤</div>
+        <div class="hi-icon">🤝</div>
         <div class="hi-text">
           <strong>NSS Unit Coordinator</strong>
-          <span>Led 50+ volunteers â€¢ Camp 2024 Organizer</span>
+          <span>Led 50+ volunteers • Camp 2024 Organizer</span>
         </div>
       </div>
       <a href="https://linkedin.com/in/vaibhav-dahatonde" target="_blank" class="btn-primary" style="align-self:flex-start; margin-top:8px;">
-        LinkedIn Profile â†—
+        LinkedIn Profile ↗
       </a>
     </div>
   </div>
@@ -653,7 +653,7 @@ footer span { color:var(--v3); }
 
 <div class="divider"></div>
 
-<!-- â”€â”€â”€ EXPERIENCE â”€â”€â”€ -->
+<!-- ─── EXPERIENCE ─── -->
 <section id="experience" class="section-wrap">
   <div class="section-label">Work History</div>
   <h2 class="section-title">My <span>Experience</span></h2>
@@ -663,10 +663,10 @@ footer span { color:var(--v3); }
     <div class="timeline-item">
       <div class="timeline-card">
         <div class="tc-header">
-          <div class="tc-role">Intern â€” Machine Integration & Commissioning</div>
-          <div class="tc-period">Dec 2025 â€“ Jan 2026</div>
+          <div class="tc-role">Intern — Machine Integration & Commissioning</div>
+          <div class="tc-period">Dec 2025 – Jan 2026</div>
         </div>
-        <div class="tc-company">NULED Electronics Pvt. Ltd â€¢ Faridabad</div>
+        <div class="tc-company">NULED Electronics Pvt. Ltd • Faridabad</div>
         <ul class="tc-points">
           <li>Managed mechanical and electrical commissioning of the GIGA 8888 CNC system, validating all mechatronic parameters to operational standards.</li>
           <li>Performed precision spindle fault analysis and repair, resolving alignment deviations through systematic technical troubleshooting.</li>
@@ -677,10 +677,10 @@ footer span { color:var(--v3); }
     <div class="timeline-item">
       <div class="timeline-card">
         <div class="tc-header">
-          <div class="tc-role">Intern â€” Quality & Manufacturing Process</div>
-          <div class="tc-period">May 2025 â€“ Jul 2025</div>
+          <div class="tc-role">Intern — Quality & Manufacturing Process</div>
+          <div class="tc-period">May 2025 – Jul 2025</div>
         </div>
-        <div class="tc-company">Associate Circuits â€¢ Ghaziabad</div>
+        <div class="tc-company">Associate Circuits • Ghaziabad</div>
         <ul class="tc-points">
           <li>Applied GD&T and Engineering Standard Work (ESW) to monitor CNC production processes and ensure dimensional accuracy of high-precision mechanical components.</li>
           <li>Conducted DFMEA and 7-Step problem-solving to diagnose and resolve recurring mechanical failures, reducing production rework.</li>
@@ -693,70 +693,70 @@ footer span { color:var(--v3); }
 
 <div class="divider"></div>
 
-<!-- â”€â”€â”€ PROJECTS â”€â”€â”€ -->
+<!-- ─── PROJECTS ─── -->
 <section id="projects" class="section-wrap">
   <div class="section-label">What I've Built</div>
   <h2 class="section-title">Featured <span>Projects</span></h2>
-  <p class="section-desc">From topology optimisation to CFD â€” each project is simulation-validated and production-ready.</p>
+  <p class="section-desc">From topology optimisation to CFD — each project is simulation-validated and production-ready.</p>
 
   <div class="projects-grid">
 
     <div class="project-card fade-up">
-      <div class="pc-arrow">â†—</div>
+      <div class="pc-arrow">↗</div>
       <div class="pc-tag">Structural</div>
-      <div class="pc-title">Topology Optimisation â€” Washing Machine Chassis</div>
-      <div class="pc-desc">FEA-driven geometry refinement of a sheet metal chassis. Applied DFM principles â€” bend radii, flange tolerances, weld locations â€” for full producibility.</div>
+      <div class="pc-title">Topology Optimisation — Washing Machine Chassis</div>
+      <div class="pc-desc">FEA-driven geometry refinement of a sheet metal chassis. Applied DFM principles — bend radii, flange tolerances, weld locations — for full producibility.</div>
       <div class="pc-tools">
         <span class="pc-tool">SolidWorks</span>
         <span class="pc-tool">ANSYS</span>
         <span class="pc-tool">FEA</span>
         <span class="pc-tool">Sheet Metal</span>
       </div>
-      <div class="pc-achievement">ðŸŽ¯ 18% weight reduction while maintaining structural rigidity</div>
+      <div class="pc-achievement">🎯 18% weight reduction while maintaining structural rigidity</div>
     </div>
 
     <div class="project-card fade-up" style="transition-delay:0.1s">
-      <div class="pc-arrow">â†—</div>
+      <div class="pc-arrow">↗</div>
       <div class="pc-tag">Vibration</div>
-      <div class="pc-title">Vibrational Analysis â€” Vehicle Projector Lamp</div>
+      <div class="pc-title">Vibrational Analysis — Vehicle Projector Lamp</div>
       <div class="pc-desc">Industry-sponsored (Whitelight lamp pvt ltd). Modal and spectral analysis identifying critical natural frequencies and proposing geometry modifications.</div>
       <div class="pc-tools">
         <span class="pc-tool">ANSYS Mechanical</span>
         <span class="pc-tool">Modal Analysis</span>
         <span class="pc-tool">Spectral</span>
       </div>
-      <div class="pc-achievement">ðŸŽ¯ Identified 3 critical natural frequencies; stress 1gâ€“30g analysis</div>
+      <div class="pc-achievement">🎯 Identified 3 critical natural frequencies; stress 1g–30g analysis</div>
     </div>
 
     <div class="project-card fade-up" style="transition-delay:0.2s">
-      <div class="pc-arrow">â†—</div>
+      <div class="pc-arrow">↗</div>
       <div class="pc-tag">Mechanical Design</div>
       <div class="pc-title">Two-Stage Helical Gearbox for Chain Conveyors</div>
-      <div class="pc-desc">Designed a 7.5 kW industrial gearbox achieving 24:1 speed reduction (1440â†’60 RPM). Validated gear geometry, shaft sizing, bearing selection analytically.</div>
+      <div class="pc-desc">Designed a 7.5 kW industrial gearbox achieving 24:1 speed reduction (1440→60 RPM). Validated gear geometry, shaft sizing, bearing selection analytically.</div>
       <div class="pc-tools">
         <span class="pc-tool">SolidWorks</span>
         <span class="pc-tool">ANSYS</span>
         <span class="pc-tool">GD&T</span>
         <span class="pc-tool">Eng BOM</span>
       </div>
-      <div class="pc-achievement">ðŸŽ¯ Full Engineering BOM + assembly drawings with GD&T callouts</div>
+      <div class="pc-achievement">🎯 Full Engineering BOM + assembly drawings with GD&T callouts</div>
     </div>
 
     <div class="project-card fade-up" style="transition-delay:0.3s">
-      <div class="pc-arrow">â†—</div>
+      <div class="pc-arrow">↗</div>
       <div class="pc-tag">CFD</div>
-      <div class="pc-title">CFD Analysis â€” Axial Compressor Rotor</div>
+      <div class="pc-title">CFD Analysis — Axial Compressor Rotor</div>
       <div class="pc-desc">3D steady-state CFD simulation at 16,043 RPM with full pressure/velocity distribution mapping across rotor span.</div>
       <div class="pc-tools">
         <span class="pc-tool">ANSYS CFX</span>
         <span class="pc-tool">CFD</span>
         <span class="pc-tool">Fluid Dynamics</span>
       </div>
-      <div class="pc-achievement">ðŸŽ¯ 1.58 pressure ratio & 88.8% isentropic efficiency validated</div>
+      <div class="pc-achievement">🎯 1.58 pressure ratio & 88.8% isentropic efficiency validated</div>
     </div>
 
     <div class="project-card fade-up" style="transition-delay:0.4s">
-      <div class="pc-arrow">â†—</div>
+      <div class="pc-arrow">↗</div>
       <div class="pc-tag">AI + Engineering</div>
       <div class="pc-title">AI-Powered PLM Data Extraction Platform</div>
       <div class="pc-desc">Industry-sponsored (Atlas Copco Pune R&D). ENOVIA-integrated prototype combining Be2Net and drawing databases with AI auto-classification layer.</div>
@@ -766,7 +766,7 @@ footer span { color:var(--v3); }
         <span class="pc-tool">AI/ML</span>
         <span class="pc-tool">Python</span>
       </div>
-      <div class="pc-achievement">ðŸŽ¯ Part-spec lookup: 17 min â†’ under 10 sec at 93% accuracy</div>
+      <div class="pc-achievement">🎯 Part-spec lookup: 17 min → under 10 sec at 93% accuracy</div>
     </div>
 
   </div>
@@ -774,16 +774,16 @@ footer span { color:var(--v3); }
 
 <div class="divider"></div>
 
-<!-- â”€â”€â”€ SKILLS â”€â”€â”€ -->
+<!-- ─── SKILLS ─── -->
 <section id="skills" class="section-wrap">
   <div class="section-label">Technical Expertise</div>
   <h2 class="section-title">My <span>Skills</span></h2>
-  <p class="section-desc">A full-stack mechanical engineering toolkit â€” from CAD to simulation to manufacturing.</p>
+  <p class="section-desc">A full-stack mechanical engineering toolkit — from CAD to simulation to manufacturing.</p>
 
   <div class="skills-grid">
 
     <div class="skill-category fade-up">
-      <div class="sc-icon">âœï¸</div>
+      <div class="sc-icon">✏️</div>
       <div class="sc-title">CAD & 3D Modelling</div>
       <div class="skill-bars">
         <div class="skill-bar-item">
@@ -808,7 +808,7 @@ footer span { color:var(--v3); }
     </div>
 
     <div class="skill-category fade-up" style="transition-delay:0.1s">
-      <div class="sc-icon">âš¡</div>
+      <div class="sc-icon">⚡</div>
       <div class="sc-title">Simulation & CAE</div>
       <div class="skill-bars">
         <div class="skill-bar-item">
@@ -832,7 +832,7 @@ footer span { color:var(--v3); }
     </div>
 
     <div class="skill-category fade-up" style="transition-delay:0.2s">
-      <div class="sc-icon">ðŸ­</div>
+      <div class="sc-icon">🏭</div>
       <div class="sc-title">Design & Manufacturing</div>
       <div class="skill-bars">
         <div class="skill-bar-item">
@@ -857,7 +857,7 @@ footer span { color:var(--v3); }
     </div>
 
     <div class="skill-category fade-up" style="transition-delay:0.3s">
-      <div class="sc-icon">ðŸ’»</div>
+      <div class="sc-icon">💻</div>
       <div class="sc-title">Tools & Software</div>
       <div class="skill-bars">
         <div class="skill-bar-item">
@@ -885,7 +885,7 @@ footer span { color:var(--v3); }
 
 <div class="divider"></div>
 
-<!-- â”€â”€â”€ CERTIFICATIONS â”€â”€â”€ -->
+<!-- ─── CERTIFICATIONS ─── -->
 <section id="certifications" class="section-wrap">
   <div class="section-label">Credentials</div>
   <h2 class="section-title">My <span>Certifications</span></h2>
@@ -893,35 +893,35 @@ footer span { color:var(--v3); }
 
   <div class="cert-grid fade-up">
     <div class="cert-card">
-      <div class="cert-icon">ðŸ…</div>
+      <div class="cert-icon">🏅</div>
       <div>
         <div class="cert-name">SolidWorks CSWA</div>
-        <div class="cert-issuer">Dassault SystÃ¨mes</div>
-        <div class="cert-badge">âœ“ Certified Associate</div>
+        <div class="cert-issuer">Dassault Systèmes</div>
+        <div class="cert-badge">✓ Certified Associate</div>
       </div>
     </div>
     <div class="cert-card">
-      <div class="cert-icon">âš¡</div>
+      <div class="cert-icon">⚡</div>
       <div>
-        <div class="cert-name">ANSYS Mechanical â€” FEA & Simulation</div>
+        <div class="cert-name">ANSYS Mechanical — FEA & Simulation</div>
         <div class="cert-issuer">Ansys Inc.</div>
-        <div class="cert-badge">âœ“ Certified</div>
+        <div class="cert-badge">✓ Certified</div>
       </div>
     </div>
     <div class="cert-card">
-      <div class="cert-icon">âœï¸</div>
+      <div class="cert-icon">✏️</div>
       <div>
-        <div class="cert-name">CATIA V5 â€” Part & Assembly Design</div>
-        <div class="cert-issuer">Dassault SystÃ¨mes</div>
-        <div class="cert-badge">âœ“ Certified</div>
+        <div class="cert-name">CATIA V5 — Part & Assembly Design</div>
+        <div class="cert-issuer">Dassault Systèmes</div>
+        <div class="cert-badge">✓ Certified</div>
       </div>
     </div>
     <div class="cert-card">
-      <div class="cert-icon">ðŸŒ±</div>
+      <div class="cert-icon">🌱</div>
       <div>
         <div class="cert-name">NSS Best Volunteer Award</div>
-        <div class="cert-issuer">NSS Camp 2024 â€” VIT Pune</div>
-        <div class="cert-badge">âœ“ Awarded</div>
+        <div class="cert-issuer">NSS Camp 2024 — VIT Pune</div>
+        <div class="cert-badge">✓ Awarded</div>
       </div>
     </div>
   </div>
@@ -929,7 +929,7 @@ footer span { color:var(--v3); }
 
 <div class="divider"></div>
 
-<!-- â”€â”€â”€ CONTACT â”€â”€â”€ -->
+<!-- ─── CONTACT ─── -->
 <section id="contact" class="section-wrap">
   <div class="section-label">Let's Connect</div>
   <h2 class="section-title">Get In <span>Touch</span></h2>
@@ -938,21 +938,21 @@ footer span { color:var(--v3); }
   <div class="contact-grid fade-up">
     <div class="contact-info">
       <a href="mailto:vaibhavdahatonde303@gmail.com" class="contact-item">
-        <div class="ci-icon">âœ‰ï¸</div>
+        <div class="ci-icon">✉️</div>
         <div>
           <div class="ci-label">Email</div>
           <div class="ci-val">vaibhavdahatonde303@gmail.com</div>
         </div>
       </a>
       <a href="https://linkedin.com/in/vaibhav-dahatonde" target="_blank" class="contact-item">
-        <div class="ci-icon">ðŸ’¼</div>
+        <div class="ci-icon">💼</div>
         <div>
           <div class="ci-label">LinkedIn</div>
           <div class="ci-val">linkedin.com/in/vaibhav-dahatonde</div>
         </div>
       </a>
       <div class="contact-item">
-        <div class="ci-icon">ðŸ“</div>
+        <div class="ci-icon">📍</div>
         <div>
           <div class="ci-label">Location</div>
           <div class="ci-val">Pune, Maharashtra, India</div>
@@ -960,7 +960,7 @@ footer span { color:var(--v3); }
       </div>
       <div style="margin-top:28px;">
         <a href="resume.pdf" download="Vaibhav_Dahatonde_Resume.pdf" class="btn-primary">
-          â†“ Download Resume
+          ↓ Download Resume
         </a>
       </div>
     </div>
@@ -985,16 +985,16 @@ footer span { color:var(--v3); }
         <textarea rows="5" placeholder="Tell me about the opportunity..." required></textarea>
       </div>
       <button type="submit" class="btn-primary" style="align-self:flex-start; border:none; font-size:0.95rem;">
-        Send Message âœ¦
+        Send Message ✦
       </button>
     </form>
   </div>
 </section>
 
-<!-- â”€â”€â”€ FOOTER â”€â”€â”€ -->
+<!-- ─── FOOTER ─── -->
 <footer>
-  <p>Crafted with passion by <span>Vaibhav Dahatonde</span> â€¢ B.Tech Mechanical Engineering, VIT Pune</p>
-  <p style="margin-top:6px; font-size:0.75rem; opacity:0.5;">Â© 2026 All rights reserved</p>
+  <p>Crafted with passion by <span>Vaibhav Dahatonde</span> • B.Tech Mechanical Engineering, VIT Pune</p>
+  <p style="margin-top:6px; font-size:0.75rem; opacity:0.5;">© 2026 All rights reserved</p>
 </footer>
 
 <script>
@@ -1027,9 +1027,9 @@ function toggleMenu(){
 function handleSubmit(e){
   e.preventDefault();
   const btn=e.target.querySelector('button[type=submit]');
-  btn.textContent='Message Sent! âœ“';
+  btn.textContent='Message Sent! ✓';
   btn.style.background='linear-gradient(135deg,#059669,#10b981)';
-  setTimeout(()=>{btn.textContent='Send Message âœ¦'; btn.style.background=''; e.target.reset();},3000);
+  setTimeout(()=>{btn.textContent='Send Message ✦'; btn.style.background=''; e.target.reset();},3000);
 }
 
 /* COUNTERS */
