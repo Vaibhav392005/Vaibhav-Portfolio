@@ -521,7 +521,7 @@ footer span { color:var(--v3); }
     <a href="#skills">Skills</a>
     <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
-    <a href="#" class="nav-cta" onclick="downloadResume()">↓ Resume</a>
+    <a href="resume.pdf" download="Vaibhav_Dahatonde_Resume.pdf" class="nav-cta">↓ Resume</a>
   </nav>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -535,7 +535,7 @@ footer span { color:var(--v3); }
   <a href="#skills" onclick="toggleMenu()">Skills</a>
   <a href="#certifications" onclick="toggleMenu()">Certifications</a>
   <a href="#contact" onclick="toggleMenu()">Contact</a>
-  <a href="#" onclick="downloadResume(); toggleMenu()">↓ Download Resume</a>
+  <a href="resume.pdf" download="Vaibhav_Dahatonde_Resume.pdf" onclick="toggleMenu()">↓ Download Resume</a>
 </div>
 
 <!-- ─── HERO ─── -->
@@ -950,7 +950,7 @@ footer span { color:var(--v3); }
         </div>
       </div>
       <div style="margin-top:28px;">
-        <a href="#" onclick="downloadResume()" class="btn-primary">
+        <a href="resume.pdf" download="Vaibhav_Dahatonde_Resume.pdf" class="btn-primary">
           ↓ Download Resume
         </a>
       </div>
@@ -1013,10 +1013,6 @@ function toggleMenu(){
   document.getElementById('mobileMenu').classList.toggle('open');
 }
 
-/* RESUME DOWNLOAD */
-function downloadResume(){
-  alert('Please link your resume PDF here! Replace this function with: window.open("your-resume.pdf")');
-}
 
 /* FORM */
 function handleSubmit(e){
